@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: linear-gradient(236.85deg, #041832 27.26%, #3468a7 96.03%);
+    background-color: dimgray;
     font-size: 20px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
@@ -80,7 +80,7 @@ body{
 }
 
 .dark {
-    background: linear-gradient(236.85deg, #7f078f 27.26%, #b6c8dd 96.03%);
+    background-color: blueviolet;
   }
 
 .dark .checkbox input {
