@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: antiquewhite;
+    font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switcher-container .description {
+    margin-left: 1px;
+    letter-spacing: 0.2rem;
+    font-size: 1.0rem;
+}
+.switch > .input {
+    display: none;
+}
+
+.slider{
+    position: relative;
+    background-color: whitesmoke;
+    width: 80px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.button {
+    background-color: blueviolet;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius:50%;
+    pointer-events: none;
+    top: 6px;
+    left: 3px;
+    position:absolute;
+    transition: all 500ms ease-in-out;
+    box-shadow:inset -0.5rem 0.5rem 0.5rem rgba(0,0,0,0.2);
+}
+
+.switch > .slider:after {
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translate(0,-50%);
+    line-height: 1rem;
+    z-index: 1;
+    color: black;
+    transition: all 500ms ease-in-out;
+    content: "OFF";
+}
+
+.switch > .input:checked ~ .slider:after{
+    right: 46px;
+    color: #f1f1ff;
+    content: "ON";
+
+}
+
+
+.input:checked ~ .slider{
+    background: blueviolet;
+}
+
+.input:checked ~ .slider > .button{
+    background: whitesmoke;
+    left: 46px;
+    box-shadow:inset -0.5rem 0.5rem 0.5rem rgba(0,0,0,0.2);
+}
